@@ -1,0 +1,106 @@
+.nav {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    background-color: #fff;
+
+    .nav-section {
+        padding: 10px;
+        width: 33%;
+        box-sizing: border-box;
+
+        svg {
+            margin-left: 20px;
+            height: 40px;
+            width: 180px;
+        }
+
+        .search-bar {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            width: 300px;
+            padding: 10px 14px;
+            color: #717171;
+            margin: 0 auto;
+
+            .icon {
+                margin: 0 14px 0 0 !important;
+                display: inline-block;
+                height: 1rem;
+                width: 16px;
+            }
+
+            input {
+                display: inline-block;
+
+                &::placeholder {
+                    color: #999999;
+                }
+            }
+        }
+
+        .list-marker {
+            margin-right: 20px;
+            text-align: right;
+        }
+    }
+}
+
+.nav-mobile {
+    display: none;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: #fff;
+
+    .nav-section {
+        svg {
+            margin: 10px;
+            height: 40px;
+            width: 180px;
+        }
+
+        .search-bar {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            width: calc(100vw - 160px);
+            padding: 10px 14px;
+            color: #717171;
+            margin: 10px auto;
+
+            .icon {
+                margin: 0 14px 0 0 !important;
+                display: inline-block;
+                height: 1rem;
+                width: 16px;
+            }
+
+            input {
+                display: inline-block;
+
+                &::placeholder {
+                    color: #999999;
+                }
+            }
+        }
+
+        .list-marker {
+            margin: 10px;
+            text-align: right;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 850px){
+    .nav {
+        display: none;
+        text-align: center;
+        height: auto;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+}

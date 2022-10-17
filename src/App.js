@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React from "react";
+import Core from './containers/Core';
+import {
+    createBrowserRouter,
+    RouterProvider
+} from "react-router-dom";
+import "@fontsource/roboto";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch, faTimes, faLocationDot, faSignature, faImage } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faSearch, faTimes, faLocationDot, faSignature, faImage);
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Core/>,
+    },
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <RouterProvider router={router} />
     </div>
   );
 }

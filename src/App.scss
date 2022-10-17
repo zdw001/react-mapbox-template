@@ -1,0 +1,47 @@
+* {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+  overflow: hidden;
+
+  input {
+    all: unset;
+  }
+
+  textarea {
+    all: unset;
+    resize: none;
+  }
+
+  button {
+    all: unset;
+
+    &.primary {
+      background-color: #1c86c2;
+      padding: 10px 24px;
+      border-radius: 5px;
+      color: #fff;
+      //box-shadow: 0px 4px 9px rgb(0 0 0 / 5%), 0px 1.54074px 2.86667px rgb(0 0 0 / 7%), 0px 0.325926px 0.733333px rgb(0 0 0 / 12%);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #197ab3;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #222222;
+  }
+
+  span {
+    color: #717171;
+  }
+}

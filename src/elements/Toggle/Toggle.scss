@@ -1,0 +1,35 @@
+.toggle {
+  display: flex;
+
+  .option {
+    background-color: #f2f2f2;
+    color: #717171;
+    padding: 8px 4px;
+    border-radius: 5px;
+    margin: 4px;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d9d9d9;
+    }
+
+    &.active {
+      background-color: #1c86c2 !important;
+      color: #fff;
+    }
+  }
+}

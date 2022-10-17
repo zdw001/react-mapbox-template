@@ -1,0 +1,121 @@
+.marker-details {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  width: 360px;
+  max-width: calc(100vw - 80px);
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 9px rgb(0 0 0 / 5%), 0px 1.54074px 2.86667px rgb(0 0 0 / 7%), 0px 0.325926px 0.733333px rgb(0 0 0 / 12%);
+  padding: 14px 20px 20px;
+  transition: left ease-in-out 0.3s;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+
+  &.hidden {
+    left: -400px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f2f2f2;
+    color: #717171;
+    padding: 4px 8px;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ff9999;
+      color: #cc0000;
+    }
+  }
+
+  .header {
+    display: flex;
+    padding-bottom: 10px;
+    min-height: 60px;
+
+    .image-wrapper {
+      width: 25%;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+
+    .title {
+      width: calc(75% - 30px);
+
+      h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 8px;
+      }
+
+    }
+  }
+
+  .detail-section {
+    .details {
+      margin-bottom: 10px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      min-height: 60px;
+    }
+
+    .metrics {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .metric {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        color: #717171;
+        margin: 5px;
+        width: 110px;
+        //text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        font-size: 1.15rem;
+
+        .icon-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #cccccc;
+          color: #1c86c2;
+          padding: 10px;
+          height: 100%;
+
+          .icon {
+            //margin-top: -2px;
+          }
+        }
+
+        .text {
+          margin-left: 20px;
+          text-align: right;
+          padding: 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          span {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
